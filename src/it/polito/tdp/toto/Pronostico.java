@@ -6,6 +6,7 @@ import java.util.List;
 public class Pronostico {
 
 	private int N;
+	//Il pronostico è una lista di previsioni
 	private List<Previsione> colonna;
 
 	public Pronostico(int N) {
@@ -13,12 +14,19 @@ public class Pronostico {
 		colonna = new ArrayList<>();
 	}
 	
+	public int getN() {
+		return N;
+	}
 	public void add(Previsione p) {
 		if(colonna.size()<N) {
 			colonna.add(p) ;
 		} else {
 			throw new IllegalStateException("Too many elements in Proonostico") ;
 		}
+	}
+	
+	public Previsione get(int i) {
+		return this.colonna.get(i);
 	}
 	
 	public String toString() {

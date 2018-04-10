@@ -5,6 +5,8 @@ import java.util.Set;
 
 public class Previsione {
 	
+	//La previsione è un insieme di valori (riga della schedina)
+	//E' un set di risultati possibili
 	private Set<Risultato> valori ;
 	
 	public Previsione() {
